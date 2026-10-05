@@ -77,6 +77,8 @@ async function initChapter() {
 
 /* 解析: > 引用 = 提炼句, 其后内容 = 卡片详情 */
 function parseChapter(md) {
+  // 中文写作习惯不加空格，但 Markdown 要求闭合的 ** 前面是标点、后面紧跟字母/汉字时不算加粗结束符，这里自动补一个空格
+  md = md.replace(/(\*\*[^*\n]+?)\*\*(?=[\u4e00-\u9fff])/g, "$1** ");
   const tokens = marked.lexer(md);
   let title = null;
   const notes = [];
