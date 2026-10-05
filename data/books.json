@@ -8,5 +8,23 @@
       { "file": "ch01.md", "title": "第一章 科学边界" },
       { "file": "ch02.md", "title": "第二章 台球" }
     ]
+  },
+  {
+    "id": "ai-agent",
+    "title": "深入理解 AI Agent",
+    "author": "李博杰",
+    "desc": "设计原理与工程实践 · Agent = LLM + 上下文 + 工具",
+    "chapters": [
+      { "file": "ch01.md", "title": "第1章 AI Agent 入门" },
+      { "file": "ch02.md", "title": "第2章 上下文工程" },
+      { "file": "ch03.md", "title": "第3章 用户记忆和知识库" },
+      { "file": "ch04.md", "title": "第4章 工具" },
+      { "file": "ch05.md", "title": "第5章 Coding Agent 与通用 Agent" },
+      { "file": "ch06.md", "title": "第6章 交互：观察与动作空间的扩展" },
+      { "file": "ch07.md", "title": "第7章 Agent 的评估" },
+      { "file": "ch08.md", "title": "第8章 模型后训练" },
+      { "file": "ch09.md", "title": "第9章 Agent 的持续进化" },
+      { "file": "ch10.md", "title": "第10章 多 Agent 协作" }
+    ]
   }
 ]
