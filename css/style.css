@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #faf9f6;
+  --card-bg: #ffffff;
+  --text: #2b2b2b;
+  --muted: #8a8a8a;
+  --accent: #c0392b;
+  --border: #ece7e0;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.site-header { text-align: center; padding: 52px 20px 20px; }
+.site-header h1 { font-size: 30px; letter-spacing: 1px; }
+.subtitle { color: var(--muted); margin-top: 8px; font-size: 15px; }
+.back-link { display: inline-block; color: var(--muted); text-decoration: none; font-size: 14px; margin-bottom: 14px; }
+.back-link:hover { color: var(--accent); }
+.hint { color: var(--muted); font-size: 13px; margin-top: 10px; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 24px 20px 80px; }
+.site-footer { text-align: center; color: var(--muted); font-size: 13px; padding-bottom: 40px; }
+
+/* 首页书籍卡片 */
+.book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.book-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
+  padding: 24px; text-decoration: none; color: inherit;
+  box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s;
+}
+.book-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+.book-card h2 { font-size: 20px; margin-bottom: 6px; }
+.book-author { color: var(--accent); font-size: 13px; margin-bottom: 10px; }
+.book-desc { color: var(--muted); font-size: 14px; min-height: 42px; margin-bottom: 14px; }
+.book-meta { font-size: 13px; color: var(--accent); }
+
+/* 章节列表 */
+.chapter-list { max-width: 640px; margin: 0 auto; }
+.chapter-item {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 20px; margin-bottom: 12px; text-decoration: none; color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.chapter-item:hover { border-color: var(--accent); transform: translateX(4px); }
+.chapter-index { color: var(--accent); font-weight: 600; }
+.chapter-name { font-size: 16px; }
+
+/* 句子列表 */
+.note-list { max-width: 700px; margin: 0 auto; }
+.note { margin-bottom: 18px; }
+.note-quote {
+  display: inline; padding: 3px 8px; border-radius: 6px; cursor: pointer;
+  background: #fdf0ec; border-bottom: 2px dashed var(--accent);
+  font-size: 17px; transition: background 0.2s;
+}
+.note-quote:hover { background: #fbe3dc; }
+
+/* 悬停详情卡片 */
+.detail-card {
+  position: fixed; z-index: 999; max-width: 420px; max-height: 70vh; overflow-y: auto;
+  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16); padding: 16px 18px;
+  pointer-events: none; font-size: 14px;
+}
+.detail-card p { margin-bottom: 8px; }
+.detail-card p:last-child { margin-bottom: 0; }
+.detail-card ul, .detail-card ol { margin: 6px 0 8px 20px; }
+.detail-card h1, .detail-card h2, .detail-card h3 { font-size: 15px; margin: 8px 0 4px; }
+.detail-card code { background: #f4f4f4; padding: 2px 5px; border-radius: 4px; font-size: 13px; }
+.detail-card blockquote { border-left: 3px solid var(--accent); padding-left: 10px; color: var(--muted); margin: 6px 0; }
+
+.error { color: var(--accent); text-align: center; padding: 40px 0; }
+.empty { color: var(--muted); text-align: center; padding: 40px 0; }

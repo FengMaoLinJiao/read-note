@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>读书笔记 · 我的读书笔记</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="back-link" id="backToBook" href="./">← 返回章节列表</a>
+    <h1 id="chapterTitle"></h1>
+    <p class="hint">🖱️ 鼠标悬停在句子上，查看详细讲解</p>
+  </header>
+  <main class="container">
+    <div id="noteList" class="note-list"></div>
+  </main>
+  <div id="detailCard" class="detail-card" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>initChapter();</script>
+</body>
+</html>

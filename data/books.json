@@ -1,0 +1,12 @@
+[
+  {
+    "id": "san-ti",
+    "title": "三体",
+    "author": "刘慈欣",
+    "desc": "地球往事三部曲 · 关于文明、宇宙与傲慢",
+    "chapters": [
+      { "file": "ch01.md", "title": "第一章 科学边界" },
+      { "file": "ch02.md", "title": "第二章 台球" }
+    ]
+  }
+]
